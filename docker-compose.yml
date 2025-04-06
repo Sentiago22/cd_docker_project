@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  web:
+    image: nguyenminhhieu2k/cd_docker_project:latest
+    ports:
+      - '5001:5001'
+    restart: always
+
