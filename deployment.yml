@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cd-docker-project-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cd-docker-project
+  template:
+    metadata:
+      labels:
+        app: cd-docker-project
+    spec:
+      containers:
+        - name: cd-docker-project
+          image: nguyenminhhieu2k/cd_docker_project:latest
+          ports:
+            - containerPort: 5000
