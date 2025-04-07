@@ -42,7 +42,7 @@ jobs:
           username: '${{ secrets.SERVER_USER }}'
           key: '${{ secrets.SSH_PRIVATE_KEY }}'
           script: |
-            cd /path/to/project
+            cd /Users/macbook/Desktop/cd_docker_project
             docker-compose pull
             docker-compose down
             docker-compose up -d
